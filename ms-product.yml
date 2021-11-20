@@ -1,13 +1,13 @@
 spring:
   application:
-    name: ms-product
+    name: '{cipher}8a5aba466faeeb3b770258f0214da725f10937d52ca6370df5dda02fb6e092ab'
   zipkin:
-    base-url: ${ZIPKIN_URL:http://localhost:9411}
+    base-url: '{cipher}74e3c661a2252d272ab9baeb47aa6cc44d13b69d32da903a4288f5ac46d18b72a851d0be0a802c29d2b3bfc0f8151a2c96e095f1ce378a7637e0f596dcd92f64'
   h2:
     console:
       enabled: true
 server:
-  port: 7878
+  port: '{cipher}9d5c95a77cc136b678406960dcb671a65bb76cbcb6e94d502df705c46c2adf73'
 
 eureka:
   instance:
@@ -18,7 +18,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8762/eureka}
+      defaultZone: '{cipher}93a3062574b8c81f1cbc0da3c532e0567c08b89bec5fcf3b5c22c558fe40fe1b17d2770f48cca20d7244948c883a51637e3adcf6018e44e04745364643bfdeee'
 
 
 management:
