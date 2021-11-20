@@ -1,13 +1,13 @@
 spring:
   application:
-    name: ms-customer
+    name: '{cipher}5d2e0750867fa8d28128cff2ea4520c0858463fcdf5dc8d1a434982a89113af0'
   zipkin:
     base-url: '{cipher}f86a52b9b7f00558a0aaae4f87477834d5b7a5db5331d0901f38e6139a80ab385df95c1cb26ebc313d35ec059957413a779f1e6567096f474dfba0a93cd6fe70'
   h2:
     console:
       enabled: true
 server:
-  port: 6945
+  port: '{cipher}3925ea687c5ce166d72fd63aba3ac7af75842c547918b041163f7dbb2c8d8cbc'
 
 eureka:
   instance:
