@@ -12,7 +12,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       default-filters:
-        - '{cipher}55d48329974e749e4baa7a3f3d0fe3a4f3c25b59b7d77f9a3030920bf735147052ce58f3c6cb76e470f62e388280afcd8cddeb7eb2bad9884a335b5c41d0d60a852c60180b6989631d2d9c648d9e832b' '{cipher}fdf58ebf6b94c684a6e4c57fa221f4f400197c92353a44bda17aa099d8a4e5b3150f7d368acca8c82fcd8a45d63ca1f8'
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
         corsConfigurations:
           '[/**]':
