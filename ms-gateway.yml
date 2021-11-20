@@ -1,10 +1,10 @@
 server:
-  port: 8181
+  port: '{cipher}b86616c8a13c2551d8a87945274d4a2917a729ca0db7cd3d401ef25bd91763f8'
 spring:
   application:
-    name: ms-gateway
+    name: '{cipher}a5e7edf54e7284824854d1a00a27e6d163dbbf9f8979713a835e9095ebd0135d'
   zipkin:
-    base-url: ${ZIPKIN_URL:http://localhost:9411}
+    base-url: '{cipher}7e1551bfc25422bddbf68b61c8576ccbb46debe353306b9ba8c166c80c727d71c925847e36884d301892847a003d301fd2677faf1b1a73695f7652c8723b9531'
   cloud:
     gateway:
       discovery:
@@ -12,7 +12,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - '{cipher}55d48329974e749e4baa7a3f3d0fe3a4f3c25b59b7d77f9a3030920bf735147052ce58f3c6cb76e470f62e388280afcd8cddeb7eb2bad9884a335b5c41d0d60a852c60180b6989631d2d9c648d9e832b' '{cipher}fdf58ebf6b94c684a6e4c57fa221f4f400197c92353a44bda17aa099d8a4e5b3150f7d368acca8c82fcd8a45d63ca1f8'
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -28,4 +28,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8762/eureka}
+      defaultZone: '{cipher}156ec6d3097728ca4e2712e94f16eab84c90c0350b2bc818e08c9e31215ea03ef54109d545a3d9fc22d2289054bb04f736ff5c3d0472a65989d921219f4085a6'
