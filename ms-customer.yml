@@ -2,7 +2,7 @@ spring:
   application:
     name: ms-customer
   zipkin:
-    base-url: ${ZIPKIN_URL:http://localhost:9411}
+    base-url: '{cipher}f86a52b9b7f00558a0aaae4f87477834d5b7a5db5331d0901f38e6139a80ab385df95c1cb26ebc313d35ec059957413a779f1e6567096f474dfba0a93cd6fe70'
   h2:
     console:
       enabled: true
@@ -18,7 +18,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8762/eureka}
+      defaultZone: '{cipher}96990740eaf8b384c0d249df7a09a209c91e8e4d8c1b7783ef6768331139345d84bf91c8fc316dc268b85b0c91e1f6057da3dec666da3820fdcdf52fc93ac6e4'
 
 management:
   endpoints:
