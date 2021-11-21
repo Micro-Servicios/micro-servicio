@@ -25,19 +25,19 @@ spring:
           predicates:
             - Path=/ms-customer/**
           filters:
-            -RewritePath=/ms-customer/(?<remaining>.*), /$\{remaining}
+            - RewritePath=/ms-customer/(?<remaining>.*), /$\{remaining}
         - id: service_product
           uri: lb://MS_PRODUCT
           predicates:
             - Path=/ms-product/**
           filters:
-            -RewritePath=/ms-product/(?<remaining>.*), /$\{remaining}
+            - RewritePath=/ms-product/(?<remaining>.*), /$\{remaining}
         - id: service_sale
           uri: lb://MS_SALE
           predicates:
             - Path=/ms-sale/**
           filters:
-            -RewritePath=/ms-sale/(?<remaining>.*), /$\{remaining}
+            - RewritePath=/ms-sale/(?<remaining>.*), /$\{remaining}
 eureka:
   instance:
     prefer-ip-address: true
