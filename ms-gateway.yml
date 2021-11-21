@@ -7,10 +7,10 @@ spring:
     base-url: '{cipher}7e1551bfc25422bddbf68b61c8576ccbb46debe353306b9ba8c166c80c727d71c925847e36884d301892847a003d301fd2677faf1b1a73695f7652c8723b9531'
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+      #discovery:
+      #  locator:
+      #    enabled: true
+      #    lower-case-service-id: true
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
       globalcors:
@@ -19,6 +19,25 @@ spring:
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
+      routes:
+        - id: service_customer
+          uri: lb://MS_CUSTOMER
+          predicates:
+            - Path=/ms-customer/**
+          filters:
+            -RewritePath=/ms-customer/(?<remaining>.*), /$\{remaining}
+        - id: service_product
+          uri: lb://MS_PRODUCT
+          predicates:
+            - Path=/ms-product/**
+          filters:
+            -RewritePath=/ms-product/(?<remaining>.*), /$\{remaining}
+        - id: service_sale
+          uri: lb://MS_SALE
+          predicates:
+            - Path=/ms-sale/**
+          filters:
+            -RewritePath=/ms-sale/(?<remaining>.*), /$\{remaining}
 eureka:
   instance:
     prefer-ip-address: true
