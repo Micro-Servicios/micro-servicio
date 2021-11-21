@@ -21,19 +21,19 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: service_customer
-          uri: lb://MS_CUSTOMER
+          uri: lb://MS-CUSTOMER
           predicates:
             - Path=/ms-customer/**
           filters:
             - RewritePath=/ms-customer/(?<remaining>.*), /$\{remaining}
         - id: service_product
-          uri: lb://MS_PRODUCT
+          uri: lb://MS-PRODUCT
           predicates:
             - Path=/ms-product/**
           filters:
             - RewritePath=/ms-product/(?<remaining>.*), /$\{remaining}
         - id: service_sale
-          uri: lb://MS_SALE
+          uri: lb://MS-SALE
           predicates:
             - Path=/ms-sale/**
           filters:
