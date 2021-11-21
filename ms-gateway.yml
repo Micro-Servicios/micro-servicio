@@ -29,3 +29,8 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       defaultZone: '{cipher}156ec6d3097728ca4e2712e94f16eab84c90c0350b2bc818e08c9e31215ea03ef54109d545a3d9fc22d2289054bb04f736ff5c3d0472a65989d921219f4085a6'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
